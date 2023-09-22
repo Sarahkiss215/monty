@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * _mod - computes the rest of division of second top element of stack
  * @head: head of stack
