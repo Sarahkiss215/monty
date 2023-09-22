@@ -11,28 +11,28 @@ void _push(stack_t **head, unsigned int i)
 {
 	int new, index = 0, flag = 0;
 
-	if (bus.arg)
+	if (info.arg)
 	{
-		if (bus.arg[0] == '-')
+		if (info.arg[0] == '-')
 			index++;
-		for (; bus.arg[index] != '\0'; index++)
+		for (; info.arg[index] != '\0'; index++)
 		{
-			if (bus.arg[index] > 57 || bus.arg[index] < 48)
+			if (info.arg[index] > 57 || info.arg[index] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", i);
-			fclose(bus.file);
-			free(bus.content);
+			fclose(info.file);
+			free(info.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", i);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(info.file);
+		free(info.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	new = atoi(bus.arg);
-	if (bus.lifi == 0)
+	new = atoi(info.arg);
+	if (info.lifi == 0)
 		addnode(head, new);
 	else
 		addqueue(head, new);
