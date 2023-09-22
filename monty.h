@@ -21,9 +21,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -36,8 +36,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -65,6 +65,18 @@ void _pint(stack_t **head, unsigned int i);
 void _pop(stack_t **head, unsigned int i);
 void _sub(stack_t **head, unsigned int i);
 void _swap(stack_t **head, unsigned int i);
+void _mod(stack_t **head, unsigned int i);
+void _mul(stack_t **head, unsigned int i);
+void _pchar(stack_t **head, unsigned int i);
+void _pstr(stack_t **head, unsigned int i);
+void _queue(stack_t **head, unsigned int i);
+void add_queue(stack_t **head, int n);
+void _rotl(stack_t **head,  __attribute__((unused)) unsigned int i);
+void _rotr(stack_t **head, __attribute__((unused)) unsigned int i);
+void _stack(stack_t **head, unsigned int i);
+void add_node(stack_t **head, int n);
+int execute(char *content, stack_t **stack, unsigned int i, FILE *file);
+void free_stack(stack_t *head);
 
 
 #endif /* MONTY_H */
