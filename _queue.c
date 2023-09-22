@@ -15,7 +15,7 @@ void _queue(stack_t **head, unsigned int i)
 }
 
 /**
- * addqueue - add node to the tail stack
+ * add_queue - add node to the tail stack
  * @n: new_value
  * @head: head of the stack
  *
