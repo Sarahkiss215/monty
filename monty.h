@@ -4,6 +4,11 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,7 +40,31 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct info_s - variables -args, file, line content
+ * @arg: value
+ * @file: pointer to monty file
+ * @content: line content
+ * @lifi: flag change stack <-> queue
+ * Description: carries values through the program
+ */
+typedef struct info_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  info_t;
+extern info_t info;
 void _push(stack_t **head, unsigned int i);
 void _pall(stack_t **head, unsigned int i);
+void _add(stack_t **head, unsigned int i);
+void _div(stack_t **head, unsigned int i);
+void _nop(stack_t **head, unsigned int i);
+void _pint(stack_t **head, unsigned int i);
+void _pop(stack_t **head, unsigned int i);
+void _sub(stack_t **head, unsigned int i);
+void _swap(stack_t **head, unsigned int i);
+
 
 #endif /* MONTY_H */
