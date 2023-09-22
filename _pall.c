@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * _pall - prints the stack
  * @head: head of stack
@@ -9,7 +10,7 @@
 void _pall(stack_t **head, unsigned int i)
 {
 	stack_t *h;
-	(void)counter;
+	(void) i;
 
 	h = *head;
 	if (h == NULL)
