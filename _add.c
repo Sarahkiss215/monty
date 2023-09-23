@@ -1,5 +1,5 @@
 #include "monty.h"
-i
+
 /**
  * _add - adds the top two elements of the stack.
  * @head: stack head

@@ -1,5 +1,6 @@
 #define _GNU_SOURCE
 #include "monty.h"
+info_t info = {NULL, NULL, NULL, 0};
 
 /**
 * main - monty code interpreter
@@ -10,7 +11,6 @@
 */
 int main(int argc, char *argv[])
 {
-	info_t info = {NULL, NULL, NULL, 0};
 	char *content;
 	FILE *file;
 	size_t byte = 0;

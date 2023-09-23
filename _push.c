@@ -33,7 +33,7 @@ void _push(stack_t **head, unsigned int i)
 		exit(EXIT_FAILURE); }
 	new = atoi(info.arg);
 	if (info.lifi == 0)
-		addnode(head, new);
+		add_node(head, new);
 	else
-		addqueue(head, new);
+		add_queue(head, new);
 }

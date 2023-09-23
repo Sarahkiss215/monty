@@ -9,7 +9,7 @@
  */
 void _rotl(stack_t **head,  __attribute__((unused)) unsigned int i)
 {
-	stack_t *etmp = *head, *new_n;
+	stack_t *temp = *head, *new_n;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
